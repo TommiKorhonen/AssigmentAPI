@@ -1,14 +1,14 @@
 import React from 'react'
 
-// interface ICardProps {
-//     timestamp: string,
-//     reportingGroup: string,
-//     locationName: string,
-//     value: number,
-//     unit: string
-// }
+export interface ICardProps {
+    timestamp: string,
+    reportingGroup: string,
+    locationName: string,
+    value: number,
+    unit: string
+}
 
-const Card = ({ timestamp, reportingGroup, locationName, value, unit }) => {
+const Card: React.FC<ICardProps> = ({ timestamp, reportingGroup, locationName, value, unit }) => {
     return (
         <article className='flex flex-col border '>
             <div className='grid grid-cols-5'>

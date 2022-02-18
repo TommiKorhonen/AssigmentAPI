@@ -1,6 +1,10 @@
 import React from 'react'
-import Card from '../Card/Card'
-const Cards = ({ energyData }) => {
+import Card, { ICardProps } from '../Card/Card'
+
+interface ICardsProps {
+    energyData: ICardProps[];
+}
+const Cards: React.FC<ICardsProps> = ({ energyData }) => {
     return (
         <div>
             {energyData.map((energy, index) => {
